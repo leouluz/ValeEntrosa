@@ -1,9 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Platform } from 'react-native';
+
+
 
 export default function Login() {
     return (
-        <View >
+        <View texto={sdasda} style={styles.tela}>
             <Text style={styles.texto}>Testando React-native</Text>
             <TouchableOpacity style={styles.button}><Text>Testando</Text></TouchableOpacity>
         </View>
@@ -11,14 +13,21 @@ export default function Login() {
 }
 
 const styles = StyleSheet.create({
+    tela: {
+        alignItems: 'center'
+    },
     texto: {
+        padding: (200, 30),
         fontSize: 20,
     },
     button: {
-        height: 20,
-        width: 200,
+        paddingTop: 10,
+        height: 50,
+        width: 250,
         borderRadius: 5,
+        shadowColor: 15,
         backgroundColor: '#BA55D3',
+        alignItems: 'center'
     }
 })
 
