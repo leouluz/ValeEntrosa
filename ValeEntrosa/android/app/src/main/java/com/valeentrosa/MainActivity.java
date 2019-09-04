@@ -12,4 +12,14 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "ValeEntrosa";
     }
+
+    @Override
+    protected ReactActivity createReactActivityDelegate(){
+        return new ReactActivityDelegate(this, getMainComponentName()){
+            @Override
+            protected ReactRootView createRootView(){
+                return new RNGestureHandlerEnableRootView(MainActivity.this)
+            }
+        };
+    }
 }
