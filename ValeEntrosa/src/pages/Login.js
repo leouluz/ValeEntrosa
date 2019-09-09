@@ -2,9 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 
 
-
-
-
 export default function Login({ navigation }) {
     function handleLogin() {
         navigation.navigate('Home')
