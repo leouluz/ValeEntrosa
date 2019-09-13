@@ -7,16 +7,19 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-export default function Login() {
+export default function Login({navigation}) {
+  function handlerLogin() {
+    navigation.navigate('Home');
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.logo}> Vale Entrosa</Text>
       <Text style={styles.texto}>
-        {' '}
         (Logo/Encarregada pela equipe de designer)
       </Text>
       <TextInput style={styles.input} placeholder="Digite seu usuario" />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={handlerLogin}>
         <Text style={styles.buttonText}>Acessar</Text>
       </TouchableOpacity>
     </View>
