@@ -4,8 +4,10 @@ import {View, StyleSheet, Text} from 'react-native';
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Text style={styles.textOne}>Seu credito para entrosar é de: </Text>
+      <Text style={styles.textOne}>Você possui:</Text>
       <Text style={styles.textTwo}>50</Text>
+      <Text style={styles.textOne}>ce</Text>
+
     </View>
   );
 }
