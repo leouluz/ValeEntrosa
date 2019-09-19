@@ -1,26 +1,24 @@
 import React from 'react';
 import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
 
-
-
 export default function Home() {
+  var valor = (this.state = {cePoint: 50});
 
   const botaoMais = () => {
-    cePoint = cePoint + 1
-    return cePoint;
-  }
+    valor = valor + 1;
+    this.setState({cePoint: {valor}});
+  };
   const botaoMenos = () => {
-    cePoint = cePoint - 1
-    return cePoint;
-  }
-  var cePoint = 50;
+    valor = valor - 1;
+    this.setState({cePoint: {valor}});
+  };
+
   return (
-    
     <View style={styles.container}>
       <Text style={styles.textOne}>Você possui:</Text>
       <View style={styles.pointCard}>
         <View>
-          <Text style={styles.textTwo}>{cePoint}</Text>
+          <Text style={styles.textTwo}>{this.statecePoint}</Text>
         </View>
         <View style={styles.ma}>
           <Text style={styles.textThree}>ce</Text>
@@ -28,10 +26,10 @@ export default function Home() {
       </View>
       <View style={styles.containerButton}>
         <TouchableOpacity onPress={botaoMenos} style={styles.button}>
-            <Text style={styles.buttonMenos}>-</Text>
+          <Text style={styles.buttonMenos}>-</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={botaoMais} style={styles.button}>
-            <Text style={styles.buttonMais}>+</Text>
+          <Text style={styles.buttonMais}>+</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -70,31 +68,31 @@ const styles = StyleSheet.create({
   ma: {
     marginTop: 180,
   },
-  button:{
+  button: {
     borderRadius: 80,
     height: 70,
     width: 70,
     backgroundColor: '#000',
     alignItems: 'center',
-    marginHorizontal:10
+    marginHorizontal: 10,
   },
-  buttonMais:{
-    fontSize:48,
+  buttonMais: {
+    fontSize: 48,
     color: '#f5f5f5',
     textAlign: 'center',
     fontWeight: 'bold',
     elevation: 10,
-    shadowColor: '#f5f5f5'
+    shadowColor: '#f5f5f5',
   },
-  buttonMenos:{
-    fontSize:48,
+  buttonMenos: {
+    fontSize: 48,
     color: '#f5f5f5',
     textAlign: 'center',
     fontWeight: 'bold',
     elevation: 10,
-    shadowColor: '#f5f5f5'
+    shadowColor: '#f5f5f5',
   },
-  containerButton:{
-    flexDirection: 'row'
-  }
+  containerButton: {
+    flexDirection: 'row',
+  },
 });
